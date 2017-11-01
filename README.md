@@ -1,21 +1,36 @@
 # Pyramid Learning Journal
 
-A person learning journal built with the Pyramid framework
+A simple Pyramid app to host a learning journal blog.
 
-**Author**:
+**Authors**:
 
 - Joseph Kim
+
+## Routes:
+
+- `/` - the home page and a listing of all journal entries
+- `/journal/{id:\d+}` - to view a single journal entry and complete text
+- `/journal/new-entry` - to create a new journal entry
+- `/journal/{id:\d+}/edit-entry` - for editing an existing journal entry
 
 ## Set Up and Installation:
 
 - Clone this repository to your local machine.
 
-- With Python 3 or within a virtual environment running Python 3, navigate to root and `pip install -e .` to download this package
+- Once downloaded, `cd` into the `pyramid_journal` directory.
 
-- At the root level, run `pserve development.ini` in terminal to begin the application, the default url is `http://localhost:6543`
+- Begin a new virtual environment with Python 3 and activate it.
 
-## Testing
+- `cd` into the next `pyramid_learning_journal` directory. It should be at the same level of `setup.py`
 
-- Navigate to the root and `pip install -e .[testing]` to install testing packages
+- `pip install` this package as well as the `testing` set of extras into your virtual environment.
 
-- In the terminal, run `tox` to check compatability for both Python 2 and 3.
+- `$ pserve development.ini --reload` to serve the application on `http://localhost:6543`
+
+## To Test
+
+- If you have the `testing` extras installed, testing is simple. If you're in the same directory as `setup.py` type the following:
+
+```
+$ py.test pyramid_journal
+```
