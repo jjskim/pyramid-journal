@@ -21,7 +21,6 @@ parso==0.1.0
 PasteDeploy==1.5.2
 pexpect==4.2.1
 pickleshare==0.7.4
-pkg-resources==0.0.0
 plaster==1.0
 plaster-pastedeploy==0.4.1
 pluggy==0.5.2
@@ -34,7 +33,6 @@ pyramid==1.9.1
 pyramid-debugtoolbar==4.3
 pyramid-ipython==0.2
 pyramid-jinja2==2.7
--e git+https://github.com/jjskim/pyramid-journal.git@a1e53cadd5ab9ffd6b966383c224d648ef57ffd5#egg=pyramid_journal
 pyramid-mako==1.0.2
 pyramid-retry==0.5
 pyramid-tm==2.2
