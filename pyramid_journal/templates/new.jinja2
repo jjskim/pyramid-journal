@@ -1,0 +1,9 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  <form>
+    <input type="text" placeholder="Title" required>
+    <textarea rows="8" cols="40" required></textarea>
+    <button type="submit"><a href="{{ request.route_url('list_view') }}">Create Post</a></button>
+  </form>
+{% endblock %}

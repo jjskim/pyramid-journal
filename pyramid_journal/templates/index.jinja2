@@ -1,0 +1,10 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    {% for entry in journals %}
+        <div class="entry_summary">
+            <a href="">{{ entry.title }}</a>
+            <p>{{ entry.date }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
