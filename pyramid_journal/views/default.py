@@ -1,33 +1,44 @@
 """Module with view functions that serve each uri."""
 
 
-from pyramid.response import Response
-import os
-
-HERE = os.path.abspath(__file__)
-TEMPLATES = os.path.join(os.path.dirname(os.path.dirname(HERE)), 'templates')
-DATA = os.path.join(os.path.dirname(os.path.dirname(HERE)), 'data')
+from ..data import journal_list
+from pyramid.httpexceptions import HTTPNotFound
+from pyramid.view import view_config
 
 
+@view_config(route_name='list_view', renderer='../templates/index.jinja2')
 def list_view(request):
-    """View for the home page."""
-    with open(os.path.join(TEMPLATES, 'index.html')) as file:
-        return Response(file.read())
+    """View config for list view."""
+    return {
+        "journals": journal_list.JOURNALS
+    }
 
 
+@view_config(route_name='detail_view', renderer='../templates/detail.jinja2')
 def detail_view(request):
-    """View for the detail page."""
-    with open(os.path.join(DATA, 'mon_oct_30.html')) as file:
-        return Response(file.read())
+    """View config for detail view."""
+    journal_id = int(request.matchdict['id'])
+    if journal_id < 0 or journal_id > len(journal_list.JOURNALS):
+        raise HTTPNotFound
+    the_journal = list(filter(lambda x: x['id'] == journal_id, journal_list.JOURNALS))[0]
+    return {
+        'journal': the_journal
+    }
 
 
-def create_view(request):
-    """View for the create new entry page."""
-    with open(os.path.join(TEMPLATES, 'new.html')) as file:
-        return Response(file.read())
-
-
+@view_config(route_name='update_view', renderer='../templates/edit.jinja2')
 def update_view(request):
-    """View for the edit page."""
-    with open(os.path.join(TEMPLATES, 'edit.html')) as file:
-        return Response(file.read())
+    """View config for update view."""
+    journal_id = int(request.matchdict['id'])
+    if journal_id < 0 or journal_id > len(journal_list.JOURNALS):
+        raise HTTPNotFound
+    the_journal = list(filter(lambda x: x['id'] == journal_id, journal_list.JOURNALS))[0]
+    return {
+        'journal': the_journal
+    }
+
+
+@view_config(route_name='create_view', renderer='../templates/new.jinja2')
+def create_view(request):
+    """View config for create view."""
+    return {}
