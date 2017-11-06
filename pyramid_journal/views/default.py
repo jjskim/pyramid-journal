@@ -17,7 +17,7 @@ def list_view(request):
 @view_config(route_name='detail_view', renderer='../templates/detail.jinja2')
 def detail_view(request):
     """View config for detail view."""
-    journal_id = int(request.matchdicct['id'])
+    journal_id = int(request.matchdict['id'])
     if journal_id < 0 or journal_id > len(journal_list.JOURNALS):
         raise HTTPNotFound
     the_journal = list(filter(lambda x: x['id'] == journal_id, journal_list.JOURNALS))[0]
@@ -29,7 +29,7 @@ def detail_view(request):
 @view_config(route_name='update_view', renderer='../templates/edit.jinja2')
 def update_view(request):
     """View config for update view."""
-    journal_id = int(request.matchdicct['id'])
+    journal_id = int(request.matchdict['id'])
     if journal_id < 0 or journal_id > len(journal_list.JOURNALS):
         raise HTTPNotFound
     the_journal = list(filter(lambda x: x['id'] == journal_id, journal_list.JOURNALS))[0]
