@@ -2,8 +2,8 @@
 
 {% block content %}
   <form>
-    <input type="text" placeholder="{{ journal.title }}">
-    <textarea rows="8" cols="40" placeholder="{{ journal.body }}"></textarea>
+    <input type="text" value="{{ journal.title }}">
+    <textarea rows="8" cols="40">{{ journal.body }}</textarea>
     <button type="submit"><a href="{{ request.route_url('list_view') }}">Edit Post</a></button>
   </form>
 {% endblock %}
