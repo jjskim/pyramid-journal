@@ -23,19 +23,19 @@ entry_14 = "Today we talked about graphs and learned a little more about working
 entry_15 = "Today was mostly review and going through the first few steps of the pyramid assignment. I thought the demo was incredibly helpful, it really helped to have an explanation after each modification explaining why we were doing that particular thing. My understanding of Pyramid has definitely improved after today."
 
 JOURNALS = [
-    {'id': 1, 'title': 'Day 1', 'date': datetime.strptime('10/16/2017', FMT), 'body': entry_1},
-    {'id': 2, 'title': 'Day 2', 'date': datetime.strptime('10/17/2017', FMT), 'body': entry_2},
-    {'id': 3, 'title': 'Day 3', 'date': datetime.strptime('10/19/2017', FMT), 'body': entry_3},
-    {'id': 4, 'title': 'Day 4', 'date': datetime.strptime('10/20/2017', FMT), 'body': entry_4},
-    {'id': 5, 'title': 'Day 5', 'date': datetime.strptime('10/21/2017', FMT), 'body': entry_5},
-    {'id': 6, 'title': 'Day 6', 'date': datetime.strptime('10/23/2017', FMT), 'body': entry_6},
-    {'id': 7, 'title': 'Day 7', 'date': datetime.strptime('10/24/2017', FMT), 'body': entry_7},
-    {'id': 8, 'title': 'Day 8', 'date': datetime.strptime('10/25/2017', FMT), 'body': entry_8},
-    {'id': 9, 'title': 'Day 9', 'date': datetime.strptime('10/26/2017', FMT), 'body': entry_9},
-    {'id': 10, 'title': 'Day 10', 'date': datetime.strptime('10/27/2017', FMT), 'body': entry_10},
-    {'id': 11, 'title': 'Day 11', 'date': datetime.strptime('10/30/2017', FMT), 'body': entry_11},
-    {'id': 12, 'title': 'Day 12', 'date': datetime.strptime('10/31/2017', FMT), 'body': entry_12},
-    {'id': 13, 'title': 'Day 13', 'date': datetime.strptime('11/01/2017', FMT), 'body': entry_13},
-    {'id': 14, 'title': 'Day 14', 'date': datetime.strptime('11/02/2017', FMT), 'body': entry_14},
-    {'id': 15, 'title': 'Day 15', 'date': datetime.strptime('11/03/2017', FMT), 'body': entry_15}
+    {'id': 1, 'title': 'Day 1', 'date': datetime.strptime('10/16/2017', FMT).date(), 'body': entry_1},
+    {'id': 2, 'title': 'Day 2', 'date': datetime.strptime('10/17/2017', FMT).date(), 'body': entry_2},
+    {'id': 3, 'title': 'Day 3', 'date': datetime.strptime('10/19/2017', FMT).date(), 'body': entry_3},
+    {'id': 4, 'title': 'Day 4', 'date': datetime.strptime('10/20/2017', FMT).date(), 'body': entry_4},
+    {'id': 5, 'title': 'Day 5', 'date': datetime.strptime('10/21/2017', FMT).date(), 'body': entry_5},
+    {'id': 6, 'title': 'Day 6', 'date': datetime.strptime('10/23/2017', FMT).date(), 'body': entry_6},
+    {'id': 7, 'title': 'Day 7', 'date': datetime.strptime('10/24/2017', FMT).date(), 'body': entry_7},
+    {'id': 8, 'title': 'Day 8', 'date': datetime.strptime('10/25/2017', FMT).date(), 'body': entry_8},
+    {'id': 9, 'title': 'Day 9', 'date': datetime.strptime('10/26/2017', FMT).date(), 'body': entry_9},
+    {'id': 10, 'title': 'Day 10', 'date': datetime.strptime('10/27/2017', FMT).date(), 'body': entry_10},
+    {'id': 11, 'title': 'Day 11', 'date': datetime.strptime('10/30/2017', FMT).date(), 'body': entry_11},
+    {'id': 12, 'title': 'Day 12', 'date': datetime.strptime('10/31/2017', FMT).date(), 'body': entry_12},
+    {'id': 13, 'title': 'Day 13', 'date': datetime.strptime('11/01/2017', FMT).date(), 'body': entry_13},
+    {'id': 14, 'title': 'Day 14', 'date': datetime.strptime('11/02/2017', FMT).date(), 'body': entry_14},
+    {'id': 15, 'title': 'Day 15', 'date': datetime.strptime('11/03/2017', FMT).date(), 'body': entry_15}
 ]
